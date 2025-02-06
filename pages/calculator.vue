@@ -1,5 +1,13 @@
 // components/Calculator.vue
 <template>
+  <!-- Return Home Button -->
+  <router-link
+    to="/"
+    class="fixed top-4 left-4 bg-[#ff5370] text-white font-bold py-2 px-4 rounded hover:bg-[#ff7a80] transition"
+  >
+    Return Home
+  </router-link>
+
   <div class="flex justify-center items-center h-screen bg-[#1a1b26]">
     <div class="w-80 bg-[#222436] p-4 rounded-2xl shadow-lg border border-[#2e3440]">
       <!-- Display -->
@@ -9,10 +17,13 @@
       
       <!-- Buttons Grid -->
       <div class="grid grid-cols-4 gap-2">
-        <button v-for="button in buttons" :key="button.label"
+        <button
+          v-for="button in buttons"
+          :key="button.label"
           class="py-3 text-xl font-bold rounded-lg shadow-md transition-all"
           :class="getButtonClass(button.label)"
-          @click="handleClick(button.label)">
+          @click="handleClick(button.label)"
+        >
           {{ button.label }}
         </button>
       </div>
@@ -42,6 +53,7 @@ const handleClick = (label) => {
 
 const evaluateExpression = () => {
   try {
+    // Using eval here for simplicity; in production consider a safer alternative.
     currentInput.value = eval(currentInput.value).toString();
   } catch (error) {
     currentInput.value = "Error";

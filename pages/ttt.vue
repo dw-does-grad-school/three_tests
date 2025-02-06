@@ -1,5 +1,11 @@
 // components/TicTacToe.vue
 <template>
+    <router-link
+    to="/"
+    class="fixed top-4 left-4 bg-[#ff5370] text-white font-bold py-2 px-4 rounded hover:bg-[#ff7a80] transition"
+  >
+    Return Home
+  </router-link>
   <div class="flex flex-col items-center justify-center h-screen bg-[#1c1c1c] text-[#b5a642]">
     <h1 class="text-4xl font-bold mb-4">Tic Tac Toe - Breaking Bad Edition</h1>
     

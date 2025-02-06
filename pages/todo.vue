@@ -1,4 +1,10 @@
 <template>
+  <router-link
+    to="/"
+    class="fixed top-4 left-4 bg-[#ff5370] text-white font-bold py-2 px-4 rounded hover:bg-[#ff7a80] transition"
+  >
+    Return Home
+  </router-link>
   <div class="max-w-md mx-auto mt-10 p-6 bg-red-200 border-4 border-black">
     <h1 class="text-3xl font-extrabold uppercase mb-4 text-center border-b-4 border-black pb-2">
       Todo List
