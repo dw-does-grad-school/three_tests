@@ -2,7 +2,7 @@
 <template>
     <router-link
     to="/"
-    class="fixed top-4 left-4 bg-[#ff5370] text-white font-bold py-2 px-4 rounded hover:bg-[#ff7a80] transition"
+    class="fixed top-4 left-4 bg-[#1f6032] text-white font-bold py-2 px-4 rounded hover:bg-[#ff7a80] transition"
   >
     Return Home
   </router-link>
